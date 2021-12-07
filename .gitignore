@@ -1,0 +1,47 @@
+#### Eclipse
+**/.settings/
+**/.externalToolBuilders/
+**/.metadata
+**/*.tmp
+**/*.bak
+**/*.swp
+**/*~.nib
+**/local.properties
+**/.loadpath
+**/.recommenders
+**/.project
+**/*.launch
+**/*.pydevproject
+**/.cproject
+**/.classpath
+**/.factorypath
+**/.buildpath
+**/.target
+**/.tern-project
+**/.texlipse
+**/.springBeans
+
+#### NetBeans
+**/nbproject/private/
+**/build/
+**/nbbuild/
+**/dist/
+**/nbdist/
+**/.nb-gradle/
+
+#### IntelliJ
+**/.idea/
+**/.idea_modules/
+**/*.iws
+**/*.iml
+
+#### Node
+**/node_modules/
+**/coverage/
+**/tests/
+**/.npm/
+**/npm-debug.log*
+
+#### Project specific
+**/.~lock.*
+

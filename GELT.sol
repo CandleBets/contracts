@@ -1,6 +1,6 @@
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.9;
 
-import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol";
+import "https://github.com/CandleBets/openzeppelin-contracts/blob/release-v4.4/contracts/token/ERC20/ERC20.sol";
 
 contract OwnersERC20 is
 ERC20
@@ -15,20 +15,18 @@ ERC20
         _;
     }
     
-    /* @dev Initalizes the total supply and some meta
-    details of the token
+    /* @dev Initializes the total supply and some meta details of the token
     */
-    constructor(string memory _name, string memory _symbol, uint _initialSupply) ERC20(_name, _symbol)
+    constructor(string memory _name, string memory _symbol, uint256 _initialSupply) ERC20(_name, _symbol)
     {
         owner = msg.sender;    
         _mint(owner, _initialSupply*(10**18));
     }
     
     
-    /* @dev mint new tokens in the owners
-    account
+    /* @dev mint new tokens in the owners account
     */
-    function mint(uint _amount)
+    function mint(uint256 _amount)
     public 
     isOwner(msg.sender)
     {
@@ -36,10 +34,9 @@ ERC20
     }
     
     
-    /*@dev burn the tokens from the owners 
-    account
+    /* @dev burn the tokens from the owners account
     */
-    function burn(uint _amount)
+    function burn(uint256 _amount)
     public 
     isOwner(msg.sender)
     {
